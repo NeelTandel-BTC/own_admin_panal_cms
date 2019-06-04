@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message_from: MyString
+  first_ceo: MyString
+  second_ceo: MyString
+  auditor: MyString
+
+two:
+  message_from: MyString
+  first_ceo: MyString
+  second_ceo: MyString
+  auditor: MyString

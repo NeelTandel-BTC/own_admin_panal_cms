@@ -1,0 +1,51 @@
+<section class="panel first-block animatedParent" data-section-name="home">
+  <%= image_tag("first-section", class: 'bg') %>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="inner-content">
+      <video class="" controls="controls" width="320" height="240">
+        <source src="/media/1/movie.mp4" type="video/mp4" />
+        Your browser does not support the video tag.</video>
+      <h1 class="">
+        <small>
+          <%= @first_page.first.message_from %>
+        </small>
+        <%= @first_page.first.first_ceo %> | <%= @first_page.first.second_ceo %></h1>
+    </div>
+    <div class="footer">
+      <p id="editable">
+        <%= @first_page.first.auditor %>
+        <button id='edit' style='display:none' type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+        <%# <div id='edit' style='display:none' data-toggle="modal" data-target="#myModal">edit</div> %>
+      </p>
+      <a href="#our-promise" class="">
+        <%= image_tag("go-back") %>
+      </a>
+    </div>
+    <div class="footer"></div>
+    <div class="footer"></div>
+  </div>
+</section>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p><input type="text" name="FirstName" value='<%= @first_page.first.auditor %>'><br>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $("#editable").hover(function(){
+    $("#edit").show();
+  })
+</script>

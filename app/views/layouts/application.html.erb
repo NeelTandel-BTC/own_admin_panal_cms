@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OwnAdminPanalCms</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header class="animatedParent animateOnce">
+      <section class="top-bar">
+        <div class="container-fluid">
+          <a href=""><%= image_tag 'logo-white.png', class: "logo" %></a>
+          <div class="hamburger hamburger--spin">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <nav class="main-navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Promise to you</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+    <%= yield %>
+    </div>
+  </body>
+</html>
